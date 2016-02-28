@@ -1,0 +1,182 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 5, ../../../../games/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../games/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../games/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../games/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../games/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../games/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../games/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../games/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../games/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 18, ../sass/screen.scss */
+.container {
+  width: 80%;
+  height: 800px;
+  margin: 0 auto;
+}
+
+/* line 25, ../sass/screen.scss */
+.ang-bl-moves {
+  width: 370px;
+  height: 370px;
+  margin: 0 auto;
+  background: linear-gradient(#545c81, #3a3f59);
+  border-radius: 50%;
+  border: 8px solid #222534;
+  opacity: 0.9;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity = calc($op*10));
+  filter: alpha(opacity=calc($op*10));
+}
+
+/* line 36, ../sass/screen.scss */
+.sr-2 {
+  position: relative;
+  display: inline-block;
+  background-image: url("../graphics/sr22.png");
+  width: 300px;
+  height: 300px;
+  animation: diving 3s ease-in-out infinite, diving-rotate 3s ease-in-out infinite;
+  animation-delay: 0.25s;
+  left: 20px;
+  bottom: -50px;
+}
+
+@keyframes diving {
+  0% {
+    margin-top: 5px;
+  }
+  50% {
+    margin-top: 10px;
+  }
+  100% {
+    margin-top: 5px;
+  }
+}
+@keyframes diving-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(3deg);
+  }
+  75% {
+    transform: rotate(2deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+/* line 79, ../sass/screen.scss */
+.stars {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background: white;
+  border-radius: 50%;
+  opacity: 0.9;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity = calc($op*10));
+  filter: alpha(opacity=calc($op*10));
+  animation: star-anim 300ms ease-in-out infinite normal, star-s1-scale-movement 700ms ease-in-out infinite normal;
+}
+
+/* line 90, ../sass/screen.scss */
+.s-2 {
+  animation: star-anim 300ms ease-in-out infinite normal, star-s2-scale-movement 700ms ease-in-out infinite normal;
+}
+
+/* line 94, ../sass/screen.scss */
+.s-3 {
+  animation: star-anim 300ms ease-in-out infinite normal, star-s3-scale-movement 700ms ease-in-out infinite normal;
+}
+
+@keyframes star-anim {
+  0% {
+    margin-left: 50px;
+  }
+  100% {
+    margin-left: 450px;
+  }
+}
+@keyframes star-s1-scale-movement {
+  0% {
+    margin-top: 10px;
+  }
+  100% {
+    margin-top: -400px;
+  }
+}
+@keyframes star-s2-scale-movement {
+  0% {
+    margin-top: 0px;
+  }
+  100% {
+    margin-top: -200px;
+  }
+}
+@keyframes star-s3-scale-movement {
+  0% {
+    margin-top: 20px;
+  }
+  100% {
+    margin-top: -600px;
+  }
+}
