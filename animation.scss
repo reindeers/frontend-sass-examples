@@ -1,0 +1,133 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+
+@mixin opacity($op) {
+    opacity: $op;
+	-ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity = calc($op*10));
+	filter: alpha(opacity = calc($op*10));
+} 
+
+
+$color1: #222534;
+
+
+.container{
+	width: 80%;
+	height: 800px;
+	margin: 0 auto;
+
+}
+
+.ang-bl-moves {
+	width: 370px;
+	height: 370px;
+	margin: 0 auto;
+	background: linear-gradient(lighten($color1, 25%), lighten($color1, 12%));
+	border-radius: 50%;
+	border: 8px solid $color1;
+	@include opacity(0.9);
+
+}
+
+.sr-2 {
+	position: relative;
+	display: inline-block;
+	background-image: url('../graphics/sr22.png');
+	width: 300px;
+	height: 300px;
+	animation: diving 3s ease-in-out infinite, diving-rotate 3s ease-in-out infinite;
+	animation-delay: 0.25s;
+	left: 20px;
+	bottom: -50px;
+
+}
+
+
+
+@keyframes diving {
+    0% {
+         margin-top:5px;
+    }
+    50% {
+         margin-top:10px;
+    }
+    
+    100% {
+         margin-top:5px;
+    }
+}
+
+@keyframes diving-rotate {
+    0% {
+         transform:rotate(0deg); 
+    }
+    50% {
+         transform:rotate(3deg); 
+    }
+    75% {
+        transform:rotate(2deg); 
+    }
+    100% {
+        transform:rotate(0deg); 
+    }
+}
+
+.stars{
+	position: absolute;
+	width: 5px;
+	height: 5px;
+	background: white;
+	border-radius: 50%;
+	@include opacity(0.9);
+    animation: star-anim 300ms ease-in-out infinite normal, star-s1-scale-movement 700ms ease-in-out infinite normal;
+
+}
+
+.s-2{
+	animation: star-anim 300ms ease-in-out infinite normal, star-s2-scale-movement 700ms ease-in-out infinite normal;
+}
+
+.s-3{
+	animation: star-anim 300ms ease-in-out infinite normal, star-s3-scale-movement 700ms ease-in-out infinite normal;
+}
+
+@keyframes star-anim {
+    0% {
+         margin-left:50px;
+    }
+    
+    100% {
+         margin-left:450px;
+    }
+}
+
+@keyframes star-s1-scale-movement {
+      0% { 
+          margin-top:10px;
+      }
+      100% { 
+          margin-top:-400px;
+      }
+}
+
+@keyframes star-s2-scale-movement {
+      0% { 
+          margin-top:0px;
+      }
+      100% { 
+          margin-top:-200px;
+      }
+}
+
+@keyframes star-s3-scale-movement {
+      0% { 
+          margin-top:20px;
+      }
+      100% { 
+          margin-top:-600px;
+      }
+}
