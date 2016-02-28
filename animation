@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+  </style>
+  <link href="stylesheets/screen.css" rel="stylesheet">
+</head>
+<body>
+
+
+  <div class="container">
+      
+    <div class="ang-bl-moves">
+      <div class="chap-bl sr-2"></div>
+      <div class="stars s-1"></div>
+      <div class="stars s-2"></div>
+      <div class="stars s-3"></div>
+    </div>
+  </div><!-- container -->
+
+    <script>
+  </script>
+</body>
+</html>
